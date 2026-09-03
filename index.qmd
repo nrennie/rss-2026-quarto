@@ -1,0 +1,85 @@
+---
+title: "Interactive documents with Quarto"
+subtitle: "Beyond the basics of literate programming"
+author: "Dr Nicola Rennie<br><small>RSS Conference 2026</small>"
+format: 
+  revealjs:
+    height: 900
+    width: 1600
+    auto-stretch: false
+    theme: [assets/css/custom.scss,assets/css/custom-light.scss]
+    slide-number: c
+    code-block-height: "750px"
+    fig-align: center
+    footer: |
+      [Nicola Rennie](https://nrennie.rbind.io/)
+    title-slide-attributes:
+      data-background-color: "#151C28"
+      data-background-image: "assets/img/bg-min.png"
+---
+
+## About me
+
+::: columns
+::: {.column width="60%"}
+
+Data visualisation specialist, mainly using R, Python, and D3.
+
+<br>
+
+Background in statistics, operational research, and data science.
+
+<br>
+
+Author of several R packages (mainly for visualisation).
+
+<br>
+
+Co-author of Royal Statistical Society's *Best Practices for Data Visualisation* guidance.
+
+:::
+
+::: {.column width="40%"}
+
+![](assets/img/hex_wall.png){fig-align="center" fig-alt="Grid of R package hex logos" width=100%}
+
+:::
+
+:::
+
+
+# Editable code {background-color="#FFFFFF" background-image="assets/img/bg-light-min.png" .up} 
+
+## Static code blocks
+
+## Interactive R code blocks
+
+## A little bit of webR magic
+
+## Interactive Python code blocks
+
+## Interactive git commands
+
+# Interactive charts {background-color="#FFFFFF" background-image="assets/img/bg-light-min.png" .up} 
+
+## Shiny Quarto documents
+
+## Shiny-free Quarto documents
+
+## HTMLtools
+
+## Observable
+
+# Alternative output types {background-color="#FFFFFF" background-image="assets/img/bg-light-min.png" .up} 
+
+## Carousels
+
+## Scrollytelling
+
+## Games
+
+## Resources
+
+# nrennie.rbind.io/rss-2026-quarto {background-color="#151C28" background-image="assets/img/bg-min.png" .up} 
+
+
