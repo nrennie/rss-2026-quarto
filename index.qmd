@@ -3,7 +3,7 @@ title: "Interactive documents with Quarto"
 subtitle: "Beyond the basics of literate programming"
 author: "Dr Nicola Rennie<br><small>RSS Conference 2026</small>"
 format: 
-  revealjs:
+  live-revealjs:
     height: 900
     width: 1600
     auto-stretch: false
@@ -19,6 +19,8 @@ format:
 execute: 
   eval: true
   echo: true
+filters:
+  - easycarousel
 ---
 
 {{< include _extensions/r-wasm/live/_knitr.qmd >}}
@@ -79,7 +81,17 @@ plot(mtcars$mpg, mtcars$wt)
 
 ## A little bit of webR magic
 
+```{{webr}}
+plot(mtcars$mpg, mtcars$wt)
+```
+
 ## Interactive Python code blocks
+
+````
+```{pyodide}
+2 + 2
+```
+````
 
 ## Interactive git commands
 
@@ -91,8 +103,8 @@ plot(mtcars$mpg, mtcars$wt)
 
 ::: {.column}
 
-* Put a Shiny app inside a Quarto document (requires a Shiny server)
-* Put a webR Shiny app inside a Quarto document 
+* Put a {Shiny} app inside a Quarto document (requires a Shiny server)
+* Put a Shinylive app inside a Quarto document (webR / Pyodide magic)
 * Use Observable `{ojs}` code blocks
 * Add some HTML/CSS/JavaScript magic (not as tricky as it sounds!)s
 
@@ -104,7 +116,7 @@ plot(mtcars$mpg, mtcars$wt)
 
 ## Shiny-free Quarto documents
 
-## HTMLtools
+## `htmlwidgets` + `HTMLtools`
 
 ## Observable
 
@@ -112,13 +124,63 @@ plot(mtcars$mpg, mtcars$wt)
 
 ## Carousels
 
+<br>
+
+```carousel
+![First lemur](images/lemur1.jpg)
+![Second lemur](images/lemur2.jpg)
+![Third lemur](images/lemur3.jpg)
+![Fourth lemur](images/lemur4.jpg)
+```
+
+## Carousels
+
+<br>
+
+````
+```carousel
+![First lemur](images/lemur1.jpg)
+![Second lemur](images/lemur2.jpg)
+![Third lemur](images/lemur3.jpg)
+![Fourth lemur](images/lemur4.jpg)
+```
+````
+
 ## Scrollytelling {background-color="#151C28"}
 
 ![](images/scrolly.gif){fig-align="center" fig-alt="Screen recording of scrolly gif" width=100%}
 
-## Games
+## Scrollytelling
+
+````
+---
+title: My First Closeread
+format: closeread-html
+---
+
+Hello World! Please read my Closeread story below.
+
+:::{.cr-section}
+
+Closeread enables scrollytelling.
+
+Draw your readers attention with focus effects. @cr-features
+
+:::{#cr-features}
+1. Highlighting
+2. Zooming
+3. Panning
+:::
+
+:::
+````
+
+
+## {data-menu-title="ggplot2 battles"}
 
 {{< video images/ggplot2battles.mp4 title="ggplot2 battles by Michael Lydeamore" >}}
+
+[`ggplot2` battles by Michael Lydeamore](https://www.ggplotbattles.dev/)
 
 ## Resources {background-image="images/resources.jpg" background-position="right" background-size="600px"} 
 
@@ -127,6 +189,12 @@ plot(mtcars$mpg, mtcars$wt)
 ::: {.column}
 
 * Quarto documentation: [quarto.org](https://quarto.org/)
+
+* Awesome Quarto list: [github.com/mcanouil/awesome-quarto](https://github.com/mcanouil/awesome-quarto)
+
+* Quarto extensions: [m.canouil.dev/quarto-extensions](https://m.canouil.dev/quarto-extensions/)
+
+* webR documentation: [docs.r-wasm.org/webr/latest](https://docs.r-wasm.org/webr/latest/)
 
 * Closeread scrollytelling: [closeread.dev](https://closeread.dev/)
 
