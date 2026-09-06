@@ -7,7 +7,7 @@ format:
     height: 900
     width: 1600
     auto-stretch: false
-    theme: [assets/css/custom.scss,assets/css/custom-light.scss]
+    theme: [assets/css/custom.scss]
     slide-number: c
     code-block-height: "750px"
     fig-align: center
@@ -16,7 +16,12 @@ format:
     title-slide-attributes:
       data-background-color: "#151C28"
       data-background-image: "assets/img/bg-min.png"
+execute: 
+  eval: true
+  echo: true
 ---
+
+{{< include _extensions/r-wasm/live/_knitr.qmd >}}
 
 ## About me
 
@@ -52,7 +57,25 @@ Co-author of Royal Statistical Society's *Best Practices for Data Visualisation*
 
 ## Static code blocks
 
+```{{r}}
+plot(mtcars$mpg, mtcars$wt)
+```
+
+<br>
+
+::: {.fragment}
+
+```{r}
+plot(mtcars$mpg, mtcars$wt)
+```
+
+:::
+
 ## Interactive R code blocks
+
+```{webr}
+plot(mtcars$mpg, mtcars$wt)
+```
 
 ## A little bit of webR magic
 
@@ -61,6 +84,21 @@ Co-author of Royal Statistical Society's *Best Practices for Data Visualisation*
 ## Interactive git commands
 
 # Interactive charts {background-color="#FFFFFF" background-image="assets/img/bg-light-min.png" .up} 
+
+## Interactive charts in Quarto {background-image="images/interactive.jpg" background-position="right" background-size="600px"} 
+
+::: columns
+
+::: {.column}
+
+* Put a Shiny app inside a Quarto document (requires a Shiny server)
+* Put a webR Shiny app inside a Quarto document 
+* Use Observable `{ojs}` code blocks
+* Add some HTML/CSS/JavaScript magic (not as tricky as it sounds!)s
+
+:::
+
+:::
 
 ## Shiny Quarto documents
 
@@ -74,11 +112,27 @@ Co-author of Royal Statistical Society's *Best Practices for Data Visualisation*
 
 ## Carousels
 
-## Scrollytelling
+## Scrollytelling {background-color="#151C28"}
+
+![](images/scrolly.gif){fig-align="center" fig-alt="Screen recording of scrolly gif" width=100%}
 
 ## Games
 
-## Resources
+{{< video images/ggplot2battles.mp4 title="ggplot2 battles by Michael Lydeamore" >}}
+
+## Resources {background-image="images/resources.jpg" background-position="right" background-size="600px"} 
+
+::: columns
+
+::: {.column}
+
+* Quarto documentation: [quarto.org](https://quarto.org/)
+
+* Closeread scrollytelling: [closeread.dev](https://closeread.dev/)
+
+:::
+
+:::
 
 # nrennie.rbind.io/rss-2026-quarto {background-color="#151C28" background-image="assets/img/bg-min.png" .up} 
 

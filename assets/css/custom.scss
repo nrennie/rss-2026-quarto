@@ -14,6 +14,31 @@ $presentation-h4-font-size: 1.1em;
 $presentation-font-size-root: 40px;
 $presentation-line-height: 1.5em;
 
+// colours
+$headlineColorCustom: #7F055F;
+$headingColorCustom: #7F055F;
+$bodyLinkColorCustom: #7F055F;
+$navLinkColorCustom: #7F055F;
+$sidebarLinkColorCustom: #7F055F;
+$footerTextColorCustom: #7F055F;
+$contrast-color: #7F055F;
+$link-color: #7F055F;
+$buttonHoverBgColorCustom: #7F055F;
+$borderColorCustom: #7F055F;
+$body-color: #151C28;
+$code-color: #151C28;
+$textColorCustom: #151C28;
+$sidebarTextColorCustom: #151C28;
+$body-bg: #F2F4F8;
+$navbar-bg: #F2F4F8;
+$siteBgColorCustom: #F2F4F8;
+$sidebarBgColorCustom: #F2F4F8;
+$buttonTextColorCustom: #F2F4F8;
+$buttonHoverTextColorCustom: #F2F4F8;
+$buttonBgColorCustom: #F2F4F8;
+$code-block-bg: #FFFFFF;
+
+// colour variables
 $platinum: #F2F4F8;
 $white: #FFFFFF;
 $ink_black: #151C28;
@@ -54,14 +79,22 @@ $deep_purple: #4B0743;
   justify-content: center !important;
 }
 
+a {
+  color: $link-color !important;
+}
+
 section.has-dark-background a, section.has-dark-background a:hover {
-  color: $shocking_pink !important;
+  color: $link-color !important;
 }
 
 .reveal .footer {
-  color: $link-color;
+  color: $link-color !important;
   font-family: $font-family-sans-serif;
   bottom: 20px !important;
+}
+
+.reveal .footer a {
+  color: $link-color !important;
 }
 
 .slide-number, .reveal.has-logo .slide-number {
