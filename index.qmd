@@ -201,6 +201,7 @@ Add a dropdown:
 
 ```{r}
 #| warning: false
+#| eval: false
 library(htmltools)
 options_vec <- unique(ggplot2::diamonds$cut)
 names(options_vec) <- options_vec
@@ -225,6 +226,29 @@ dropdown_html <- tags$div(
 ## `htmlwidgets` + `HTMLtools`
 
 ```{r}
+#| echo: false
+#| eval: true
+library(htmltools)
+options_vec <- unique(ggplot2::diamonds$cut)
+names(options_vec) <- options_vec
+dropdown_html <- tags$div(
+  tags$select(
+    id = "dropdown2",
+    lapply(
+      names(options_vec),
+      function(name) {
+        tags$option(
+          value =
+            options_vec[[name]],
+          name
+        )
+      }
+    )
+  )
+)
+```
+
+```{r}
 dropdown_html
 ```
 
@@ -243,6 +267,25 @@ g_girafe <- girafe(ggobj = g_int, height_svg = 4.5)
 ```
 
 ## Connecting to `htmlwidgets`
+
+```{r}
+#| echo: false
+dropdown_html <- tags$div(
+  tags$select(
+    id = "dropdown",
+    lapply(
+      names(options_vec),
+      function(name) {
+        tags$option(
+          value =
+            options_vec[[name]],
+          name
+        )
+      }
+    )
+  )
+)
+```
 
 
 ```{r}

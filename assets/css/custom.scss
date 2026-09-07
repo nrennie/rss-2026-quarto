@@ -364,24 +364,12 @@ div.callout-important.callout, div.callout-note.callout {
   display: none;
 }
 
-
-@media (max-width: 767.98px) {
-  .nav-footer-center {
-      margin-top: 1em !important;
-      order: 10;
-  }
-
-  .reverse-on-mobile > .g-col-12:nth-child(2) {
-    order: -1;
-  }
-
-  .img-full {
-    width: 100%;
-    height: auto;
-    margin-top: -50px !important;
-  }
-
+#dropdown, #dropdown2 {
+  width: 400px !important;
+  font-size: xx-large;
 }
+
+
 
 
 
